@@ -44,7 +44,6 @@ cast <- data.frame(depth = sort(runif(100, min = 0, max = 100)),
 head(cast)
 ```
 
-"original" dummy data plotted
 ```{r plot original, echo=FALSE}
 plot(cast$sal, cast$depth, ylim = rev(range(cast$depth)), xlab = "sal & T", ylab = "depth")
 points(cast$temp, cast$depth, col="red")
@@ -57,7 +56,6 @@ binned_cast <- bin_cast(x = cast,
 head(binned_cast)
 ```
 
-plot binned data
 ```{r plot bin, echo=FALSE}
 plot(binned_cast$sal, binned_cast[,1], ylim = rev(range(binned_cast[,1])), xlab = "sal & T", ylab = "depth")
 points(binned_cast$temp, binned_cast[,1], col="red")
