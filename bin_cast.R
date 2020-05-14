@@ -21,6 +21,10 @@ bin_cast <- function(x, # dataframe containing the cast
                         bin_fun) # using the specified aggregation function
   
   if(is.character(depth_col)) { colnames(binned_x)[1] <- depth_col } # plug any supplied depth column name back in
-  if(bin_size) { binned_x$bin_size <- aggregate(x[,depth_index], by = list(binned_depth = x[,depth_index]), length)[2] }
+  if(bin_size) { 
+    bin_n <- aggregate(x[,depth_index], by = list(binned_depth = x[,depth_index]), length)[2]
+    binned_x <- cbind(binned_x, bin_n)
+    colnames(binned_x)[ncol(binned_x)] <- "bin_size" 
+  }
   return(binned_x)
 }

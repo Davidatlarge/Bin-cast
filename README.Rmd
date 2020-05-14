@@ -28,7 +28,7 @@ This function is intended be used to "bin" CTD casts by depth. It takes a data f
 
 *depth_col* = NULL -- name or index of the column containing the depth values, if not supplied first column will be used
 
-*bin_size* = TRUE -- logical: should a column containing the bin size be attached to the output
+*bin_size* = FALSE -- logical: should a column containing the bin size be attached to the output
 
 ## Result
 
@@ -67,6 +67,6 @@ binned_cast1 <- bin_cast(x = cast,
                         bin_depth = 2, 
                         depth_col = "depth",
                         bin_fun = median, 
-                        bin_size = FALSE)
+                        bin_size = TRUE)
 head(binned_cast1)
 ```

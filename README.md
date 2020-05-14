@@ -19,7 +19,7 @@ Arguments
 
 *depth\_col* = NULL -- name or index of the column containing the depth values, if not supplied first column will be used
 
-*bin\_size* = TRUE -- logical: should a column containing the bin size be attached to the output
+*bin\_size* = FALSE -- logical: should a column containing the bin size be attached to the output
 
 Result
 ------
@@ -39,12 +39,12 @@ head(cast)
 ```
 
           depth     temp      sal
-    1 0.0553685 29.95769 18.08900
-    2 0.3512025 29.83043 18.89326
-    3 1.2198783 29.63237 18.97185
-    4 1.3326132 29.59212 19.00996
-    5 2.3489631 29.57774 19.14497
-    6 2.7440120 29.57309 19.43075
+    1  1.839569 29.98928 18.08924
+    2  2.504805 29.93909 18.14086
+    3  3.630907 29.81154 18.23834
+    4  4.560465 29.78159 18.28353
+    5  8.472528 29.73549 18.35619
+    6 10.017403 29.62108 18.47133
 
 <img src="README_files/figure-markdown_github/plot original-1.png" style="display: block; margin: auto;" />
 
@@ -57,12 +57,12 @@ head(binned_cast)
 ```
 
       binned_depth     temp      sal
-    1            0 29.56109 19.24192
-    2           10 28.96220 20.29413
-    3           20 28.17320 21.56559
-    4           30 26.27630 25.32202
-    5           40 25.03282 27.83551
-    6           50 23.89911 28.83188
+    1            0 29.88037 18.18800
+    2           10 29.44612 19.14264
+    3           20 28.59929 21.05889
+    4           30 27.80375 22.34259
+    5           40 27.18193 23.54558
+    6           50 25.96970 25.39162
 
 <img src="README_files/figure-markdown_github/plot bin-1.png" style="display: block; margin: auto;" />
 
@@ -73,14 +73,14 @@ binned_cast1 <- bin_cast(x = cast,
                         bin_depth = 2, 
                         depth_col = "depth",
                         bin_fun = median, 
-                        bin_size = FALSE)
+                        bin_size = TRUE)
 head(binned_cast1)
 ```
 
-      depth     temp      sal
-    1     0 29.89406 18.49113
-    2     2 29.58493 19.07747
-    3     4 29.32779 19.69047
-    4     6 29.21653 20.04516
-    5     8 29.10697 20.11345
-    6    12 28.98615 20.22012
+      depth     temp      sal bin_size
+    1     2 29.96419 18.11505        2
+    2     4 29.79656 18.26094        2
+    3     8 29.73549 18.35619        1
+    4    10 29.62108 18.47133        1
+    5    12 29.45970 19.19519        3
+    6    14 29.17662 19.84522        2
