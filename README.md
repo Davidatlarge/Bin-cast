@@ -39,14 +39,14 @@ head(cast)
 ```
 
           depth     temp      sal
-    1 0.6977031 29.80684 18.27234
-    2 1.1374422 29.70196 18.34154
-    3 1.4877293 29.53120 18.38017
-    4 1.9089965 29.52193 18.40428
-    5 2.0968131 29.46801 18.49492
-    6 2.1911099 29.37081 18.54929
+    1 0.0553685 29.95769 18.08900
+    2 0.3512025 29.83043 18.89326
+    3 1.2198783 29.63237 18.97185
+    4 1.3326132 29.59212 19.00996
+    5 2.3489631 29.57774 19.14497
+    6 2.7440120 29.57309 19.43075
 
-"original" dummy data plotted <img src="README_files/figure-markdown_github/plot original-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-markdown_github/plot original-1.png" style="display: block; margin: auto;" />
 
 binning data
 
@@ -57,14 +57,14 @@ head(binned_cast)
 ```
 
       binned_depth     temp      sal
-    1            0 29.43433 18.48745
-    2           10 28.73204 19.17094
-    3           20 27.90210 20.35656
-    4           30 27.00409 21.23033
-    5           40 26.15561 22.45508
-    6           50 24.77459 24.82890
+    1            0 29.56109 19.24192
+    2           10 28.96220 20.29413
+    3           20 28.17320 21.56559
+    4           30 26.27630 25.32202
+    5           40 25.03282 27.83551
+    6           50 23.89911 28.83188
 
-plot binned data <img src="README_files/figure-markdown_github/plot bin-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-markdown_github/plot bin-1.png" style="display: block; margin: auto;" />
 
 effects of arguments
 
@@ -78,9 +78,9 @@ head(binned_cast1)
 ```
 
       depth     temp      sal
-    1     0 29.80684 18.27234
-    2     2 29.49497 18.44960
-    3     4 29.13362 18.66780
-    4     6 29.02728 18.93920
-    5     8 28.80866 19.09064
-    6    10 28.77319 19.21685
+    1     0 29.89406 18.49113
+    2     2 29.58493 19.07747
+    3     4 29.32779 19.69047
+    4     6 29.21653 20.04516
+    5     8 29.10697 20.11345
+    6    12 28.98615 20.22012
